@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head id="head">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My resume</title>
   </head>
   <body>
     <button onclick="addCSS()" id="button">Toggle CSS</button>
-    <h1>Santiago Arango Muñoz</h1>
-    <img src="" alt="try" />
-    <h2>Summary</h2>
-    <p>hhhhhhh</p>
+
+    <header>
+      <h1>Santiago Arango Muñoz</h1>
+      <img src="" alt="try" />
+      <h2>Summary</h2>
+      <p>hhhhhhh</p>
+    </header>
     <hr />
     <h2>Education</h2>
     <ul>
       <li>w/e</li>
     </ul>
     <hr />
-    <h2>Work Experience</h2>
-    <ul>
-      <li>
-        <h3>customer service</h3>
-        <p>June-444</p>
-        <ul>
-          <li>ans</li>
-          <li>mak</li>
-          <li>eic</li>
-        </ul>
-      </li>
-      <li>
-        <h3>assistant</h3>
-        <p>jpreee</p>
-        <ul>
-          <li>ans</li>
-          <li>mak</li>
-          <li>eic</li>
-        </ul>
-      </li>
-    </ul>
+    <div>
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <h3>customer service</h3>
+          <p>June-444</p>
+          <ul>
+            <li>ans</li>
+            <li>mak</li>
+            <li>eic</li>
+          </ul>
+        </li>
+        <li>
+          <h3>assistant</h3>
+          <p>jpreee</p>
+          <ul>
+            <li>ans</li>
+            <li>mak</li>
+            <li>eic</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <hr />
     <h2>Skills</h2>
     <ul>
@@ -69,10 +74,10 @@
         counter++;
         if (counter % 2 !== 0) {
           document.getElementById("head").innerHTML =
-            '  <title>Example HTML Website</title> \n <link rel="stylesheet" href="./styles.css" />';
+            '  <title>My resume</title> \n <link rel="stylesheet" href="./styles.css" />';
         } else {
           document.getElementById("head").innerHTML =
-            "  <title>Example HTML Website</title> ";
+            "  <title>My resume</title> ";
         }
       }
     </script>
