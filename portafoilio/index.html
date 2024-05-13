@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My resume</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Santiago Arango Muñoz
+        <span> <button onclick="addCSS()" id="button">Toggle CSS</button></span>
+      </h1>
+      <img src="./descarga.jpg" alt="try" />
+      <h2>Summary</h2>
+      <a href="./8.4 Web Design Agency Project/index.html">Project1</a>
+      <p>hhhhhhh</p>
+    </header>
+    <hr />
+    <h2>Education</h2>
+    <ul>
+      <li>w/e</li>
+    </ul>
+    <hr />
+    <div>
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <h3>customer service</h3>
+          <p>June-444</p>
+          <ul>
+            <li>ans</li>
+            <li>mak</li>
+            <li>eic</li>
+          </ul>
+        </li>
+        <li>
+          <h3>assistant</h3>
+          <p>jpreee</p>
+          <ul>
+            <li>ans</li>
+            <li>mak</li>
+            <li>eic</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <h2>Skills</h2>
+    <ul>
+      <li>Customer service: ⭐️⭐️⭐️⭐️⭐️</li>
+      <li>Customer service: ⭐️⭐️⭐️⭐️⭐️</li>
+      <li>Customer service: ⭐️⭐️⭐️⭐️⭐️</li>
+    </ul>
+    <hr />
+    <h2>Awards and certifications</h2>
+    <ul>
+      <li>bla bla bla</li>
+    </ul>
+    <hr />
+    <div class="diver">
+      <h2>Other</h2>
+      <ul>
+        <li>
+          <a href="">My hobbies</a>
+        </li>
+        <li>
+          <a href="">contact me</a>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <p>© Santiago Arango Muñoz. All rights reserved.</p>
+    </footer>
+    <script>
+      let counter = 0;
+      function addCSS() {
+        counter++;
+        if (counter % 2 !== 0) {
+          document.getElementById("head").innerHTML =
+            '  <title>My resume</title> \n <link rel="stylesheet" href="./styles.css" />';
+        } else {
+          document.getElementById("head").innerHTML =
+            "  <title>My resume</title> ";
+        }
+      }
+    </script>
+  </body>
+</html>
