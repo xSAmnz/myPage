@@ -1,91 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head id="head">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My resume</title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        Santiago Arango Muñoz
-        <span> <button onclick="addCSS()" id="button">Toggle CSS</button></span>
-      </h1>
-      <img src="./descarga.jpg" alt="try" />
-      <h2>Summary</h2>
-      <ul>
-       <li><a href="./8.4 Web Design Agency Project/index.html">Project1</a> </li>
-      <li><a href="./ppfSite/ppfWebsite.html">Project PPF</a></li>
-        </ul>
-    </header>
-    <hr />
-    <h2>Education</h2>
-    <ul>
-      <li>w/e</li>
-    </ul>
-    <hr />
-    <div>
-      <h2>Work Experience</h2>
-      <ul>
-        <li>
-          <h3>customer service</h3>
-          <p>June-444</p>
-          <ul>
-            <li>ans</li>
-            <li>mak</li>
-            <li>eic</li>
-          </ul>
-        </li>
-        <li>
-          <h3>assistant</h3>
-          <p>jpreee</p>
-          <ul>
-            <li>ans</li>
-            <li>mak</li>
-            <li>eic</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <hr />
-    <h2>Skills</h2>
-    <ul>
-      <li>Customer service: ⭐️⭐️⭐️⭐️⭐️</li>
-      <li>Customer service: ⭐️⭐️⭐️⭐️⭐️</li>
-      <li>Customer service: ⭐️⭐️⭐️⭐️⭐️</li>
-    </ul>
-    <hr />
-    <h2>Awards and certifications</h2>
-    <ul>
-      <li>bla bla bla</li>
-    </ul>
-    <hr />
-    <div class="diver">
-      <h2>Other</h2>
-      <ul>
-        <li>
-          <a href="">My hobbies</a>
-        </li>
-        <li>
-          <a href="">contact me</a>
-        </li>
-      </ul>
-    </div>
-    <footer>
-      <p>© Santiago Arango Muñoz. All rights reserved.</p>
-    </footer>
-    <script>
-      let counter = 0;
-      function addCSS() {
-        counter++;
-        if (counter % 2 !== 0) {
-          document.getElementById("head").innerHTML =
-            '  <title>My resume</title> \n <link rel="stylesheet" href="./styles.css" />';
-        } else {
-          document.getElementById("head").innerHTML =
-            "  <title>My resume</title> ";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Arango Portafolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+.gradient-background {
+  background: linear-gradient(300deg, #35374B, #344955, #78A083);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+.gradient-background2 {
+  background: linear-gradient(300deg, #344955, #50727B ,#78A083);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+        .pline {
+            line-height:2;
+            font-size: 1.2em;
         }
-      }
-    </script>
-  </body>
+
+        body {
+            background-color: #181818;
+            color: #f0f0f0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #121212;
+        }
+        .navbar-brand, .nav-link {
+            color: #f0f0f0 !important;
+        }
+        .hero {
+            background-color: #121212;
+            padding: 100px 0;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .card {
+            background-color: #121212;
+            border: none;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            color: #64ffda;
+        }
+        .footer {
+            background-color: #121212;
+            padding: 20px 0;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate {
+    animation: slideIn 1s ease-out;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Santiago Arango dev</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-white gradient-background">
+        <div class="container ">
+            <h1>Hi, I'm Santiago Arango Muñoz <img src="./descarga.jpg" alt="itachi" style="border-radius: 50% 20% / 10% 40%;;"></h1>
+            <p>Junior Front-End React Developer based on Medellín-Colombia</p>
+            <a href="#projecttt" class="btn btn-success">Explore My Work</a>
+        </div>
+    </section>
+
+    <section class="about section text-center" id="about">
+        <div class="container animate">
+            <h2>About Me</h2>
+            <p class="pline">
+                Good day! My name is Santiago Arango Muñoz, and I am a passionate Junior Front-End Developer eager to kickstart my professional career. With a strong foundation in HTML, CSS, JavaScript, and experience in frameworks like React and Angular, I focus on building responsive and user-friendly web applications.
+                
+                I have developed several personal projects, including [mention a couple of personal projects], which demonstrate my ability to create functional and visually appealing websites. I am also proficient in using Bootstrap for modern web design.
+                
+                Known for my attention to detail and problem-solving skills, I am a quick learner and thrive in collaborative environments. I am excited to join a team where I can contribute with my skills, gain hands-on experience, and grow as a developer.
+                
+                Thank you for visiting my portfolio. Feel free to contact me to discuss how I can be an asset for your team.</p>
+        </div>
+    </section>
+
+    <section class="skills section text-center gradient-background2">
+        <div class="container animate">
+            <h2>Skills</h2>
+            <p>Proficient in HTML, CSS, JavaScript, React, Angular, and more.</p>
+            <p>Experienced with cloud services like AWS and Azure.</p>
+        </div>
+    </section>
+
+    <section class="projects section" id="projecttt">
+        <div class="container animate">
+            <h2 class="text-center">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card animate">
+                        <div class="card-body">   
+                            <h5 class="card-title"> <a href="./ppfSite/ppfWebsite.html" style="color: inherit;">Project One</a></h5>
+                            <p class="card-text">A comprehensive e-commerce platform developed using React and Node.js.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card animate">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Two</h5>
+                            <p class="card-text">A scalable microservices architecture implemented on AWS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card animate">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Three</h5>
+                            <p class="card-text">A responsive and accessible web application built with Angular.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog section">
+        <div class="container animate">
+            <h2 class="text-center">Blog</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Post One</h5>
+                            <p class="card-text">An in-depth look at modern web development trends.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Post Two</h5>
+                            <p class="card-text">Exploring the advantages of microservices architecture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Post Three</h5>
+                            <p class="card-text">Tips for building accessible web applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
 </html>
