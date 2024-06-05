@@ -96,6 +96,16 @@
         .animate {
     animation: slideIn 1s ease-out;
 }
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  padding-top: 25px;
+  animation: slideIn 1s ease-out;
+  
+}
     </style>
 </head>
 <body>
@@ -130,13 +140,18 @@
             <h2>About Me</h2>
             <p class="pline">
                 Good day! My name is Santiago Arango Muñoz, and I am a passionate Junior Front-End Developer eager to kickstart my professional career. With a strong foundation in HTML, CSS, JavaScript, and experience in frameworks like React and Angular, I focus on building responsive and user-friendly web applications.
-                
+            </p>
+            
+            <button type="button" class="collapsible btn btn-success">Learn more about me</button>
+            <div class="content">
+            <p class="pline collapsible"> 
                 I have developed several personal projects, including [mention a couple of personal projects], which demonstrate my ability to create functional and visually appealing websites. I am also proficient in using Bootstrap for modern web design.
                 
                 Known for my attention to detail and problem-solving skills, I am a quick learner and thrive in collaborative environments. I am excited to join a team where I can contribute with my skills, gain hands-on experience, and grow as a developer.
                 
                 Thank you for visiting my portfolio. Feel free to contact me to discuss how I can be an asset for your team.</p>
-        </div>
+            </div>
+            </div>
     </section>
 
     <section class="skills section text-center gradient-background2">
@@ -221,5 +236,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active")
+            ;
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
 </body>
 </html>
